@@ -14,7 +14,7 @@ function countdown(){
     const hours = Math.floor(totalSecond / 3600) % 24;
     const minutes = Math.floor(totalSecond / 60) % 60;
     const seconds = Math.floor(totalSecond) % 60;
-  
+
 
 
     function formatZero(time){
@@ -27,6 +27,21 @@ function countdown(){
     minutesEl.innerHTML = formatZero(minutes);
     secondsEl.innerHTML = formatZero(seconds);
 
+
+    function createSnowflake(){
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.innerHTML = '❄️';
+
+        snowflake.style.left = Math.random()* 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() + 5 + 's';
+        document.body.appendChild(snowflake);
+
+        setTimeout(() =>{
+            snowflake.remove();
+        },5000);
+    }
+    setInterval(createSnowflake,3000)
 }
 
 countdown();

@@ -6,7 +6,7 @@
 body{
     background: url('./bcg.jpg');
     display: flex;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: inherit;
 }
 .wrapper{
     display: flex;
@@ -15,8 +15,7 @@ body{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-image: url('./snowflake.png');
-    animation: move 20s linear infinite;
+
 }
 h1{
     font-size: 6rem;
@@ -49,12 +48,19 @@ h1{
 span{
     font-size: 1.1rem;
 }
-
-@keyframes move
-{
-  0% { background-position:0 0, 0 0 , 0 0  }
-  100% { background-position: 500px 1000px, 200px 400px, -100px 300px; }
-  
+.snowflake{
+    position: fixed;
+    top: -1;
+    transform: translateY(0);
+    animation: move 10s linear forwards;
+    font-size: 3rem;
 }
+
+@keyframes move{
+    to{
+        transform: translateY(105vh);
+    }
+}
+
 
 	
