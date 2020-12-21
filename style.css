@@ -52,7 +52,7 @@ span{
     position: fixed;
     top: -1;
     transform: translateY(0);
-    animation: move 10s linear forwards;
+    animation: move 3s linear forwards;
     font-size: 3rem;
 }
 

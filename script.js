@@ -34,14 +34,14 @@ function countdown(){
         snowflake.innerHTML = '❄️';
 
         snowflake.style.left = Math.random()* 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() + 5 + 's';
+        snowflake.style.animationDuration = Math.random() + 2 + 3 + 's';
         document.body.appendChild(snowflake);
 
         setTimeout(() =>{
             snowflake.remove();
         },5000);
     }
-    setInterval(createSnowflake,3000)
+    setInterval(createSnowflake,800)
 }
 
 countdown();
